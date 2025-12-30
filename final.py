@@ -108,7 +108,7 @@ st.image(mosquito_images[index], caption=mosquito_names[index], use_column_width
 # Cargar modelo YOLOv5
 @st.cache_resource
 def load_yolo_model():
-    model = torch.hub.load('yolov5', 'custom', path='models/YOLOv5/best.pt', source='local')
+    model = torch.hub.load('yolov5', 'custom', path='models/YOLOv5/best.pt')
     model.eval()  # Configura el modelo en modo evaluación
     return model.to('cpu')  # Fuerza el uso de CPU
 
