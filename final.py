@@ -2,12 +2,21 @@ import streamlit as st
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
+
+import pathlib
+from pathlib import Path
+
+import platform
+if platform.system() == 'Linux':
+    pathlib.WindowsPath = pathlib.PosixPath
+
 import plotly.express as px
 import pandas as pd
 import time
 from PIL import Image
 from torchvision import transforms
 from torchvision.models.detection import ssd300_vgg16
+
 
 # Configurar el ícono y el título de la página
 st.set_page_config(page_title="Mosquito Detector", page_icon="mosquito.ico")
