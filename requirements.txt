@@ -13,3 +13,4 @@ tqdm
 seaborn
 scipy
 psutil
+ultralytics
